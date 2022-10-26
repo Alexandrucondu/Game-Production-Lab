@@ -1,0 +1,37 @@
+{
+	"name": "Zettaroku12_2D_Indie_Game_Fantasy_Gloomy_Forest_cc2487ac326b43c29f5cb83943a0b",
+	"plugin-id": "Sprite",
+	"sid": 934387938513423,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 2048,
+						"height": 2048,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8012663,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 961498974838521,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
