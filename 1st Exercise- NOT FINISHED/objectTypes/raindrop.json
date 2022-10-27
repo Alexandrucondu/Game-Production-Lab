@@ -1,40 +1,29 @@
 {
-	"name": "CLoud",
+	"name": "RainDrop",
 	"plugin-id": "Sprite",
-	"sid": 638749697480372,
+	"sid": 494239309646511,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [
-		{
-			"behaviorId": "Sin",
-			"name": "Sine",
-			"sid": 246540293716025
-		},
-		{
-			"behaviorId": "Sin",
-			"name": "Sine2",
-			"sid": 666570956715760
-		}
-	],
+	"behaviorTypes": [],
 	"effectTypes": [],
 	"animations": {
 		"items": [
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 11,
+						"height": 16,
+						"originX": 0.6363636363636364,
+						"originY": -0.75,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1689065,
+						"imageSpriteId": 3455725,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 727262439280544,
+				"sid": 277386542885758,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

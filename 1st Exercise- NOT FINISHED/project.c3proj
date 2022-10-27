@@ -13,6 +13,14 @@
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "q6rbdse6rck",
@@ -20,7 +28,8 @@
 		"items": [
 			"Zettaroku12_2D_Indie_Game_Fantasy_Gloomy_Forest_cc2487ac326b43c29f5cb83943a0b",
 			"CLoud",
-			"Witch"
+			"Witch",
+			"RainDrop"
 		],
 		"subfolders": []
 	},

@@ -1,5 +1,63 @@
 {
 	"name": "Event sheet 1",
-	"events": [],
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 951745764363336,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "CLoud",
+					"sid": 549809884581123,
+					"parameters": {
+						"object": "RainDrop",
+						"layer": "\"Background\"",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "RainDrop",
+					"sid": 401711330610946,
+					"parameters": {
+						"x": "RainDrop.X+ random(-50,50)"
+					}
+				}
+			],
+			"sid": 222783377831647
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 385581192373862
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "RainDrop",
+					"sid": 715741024930544,
+					"parameters": {
+						"x": "RainDrop.X",
+						"y": "RainDrop.Y+4"
+					}
+				}
+			],
+			"sid": 340284610013120
+		}
+	],
 	"sid": 379326009894228
 }
