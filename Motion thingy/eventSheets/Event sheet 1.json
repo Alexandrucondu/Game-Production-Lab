@@ -1,0 +1,75 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 892097415563556
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "FpsLabel",
+					"sid": 699204603547621,
+					"parameters": {
+						"text": "\"FPS =\" & fps"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "DtLabel",
+					"sid": 418674315771281,
+					"parameters": {
+						"text": "\"Delta t=\" &dt"
+					}
+				},
+				{
+					"id": "set-x",
+					"objectClass": "WrongThing",
+					"sid": 161111865574332,
+					"parameters": {
+						"x": "WrongThing.X + 1"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "WrongThingSpeedLabel",
+					"sid": 958941414171180,
+					"parameters": {
+						"text": "1/dt & \" px/s\""
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "WrongThingSpeedLabel",
+					"sid": 180615795742961,
+					"parameters": {
+						"x": "WrongThing.X",
+						"y": "0"
+					}
+				}
+			],
+			"sid": 583287924800023
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 694779206453597,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 212947064215617
+		}
+	],
+	"sid": 112481408935021
+}

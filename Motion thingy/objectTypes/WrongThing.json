@@ -1,0 +1,37 @@
+{
+	"name": "WrongThing",
+	"plugin-id": "Sprite",
+	"sid": 931814199845900,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 149,
+						"height": 161,
+						"originX": 0.5100671140939598,
+						"originY": 0.5031055900621118,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8141786,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 817844486571835,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
