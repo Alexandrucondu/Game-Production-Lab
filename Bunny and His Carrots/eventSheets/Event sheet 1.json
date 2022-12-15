@@ -1,0 +1,311 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Fake Prospective",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 874615739397668
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Rock",
+							"sid": 122184444088208,
+							"parameters": {
+								"z": "Rock.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Tree1",
+							"sid": 236064096824791,
+							"parameters": {
+								"z": "Tree1.Y / 1000"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Tree2",
+							"sid": 934630081498643,
+							"parameters": {
+								"z": "Tree2.Y / 1000"
+							}
+						}
+					],
+					"sid": 687311143589274
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 791671628002309
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "Bunny",
+							"sid": 971517625464138,
+							"parameters": {
+								"z": "Bunny.Y / 1000"
+							}
+						}
+					],
+					"sid": 573077781520542
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 189271487273374
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Cam",
+							"sid": 651557465304592,
+							"parameters": {
+								"x": "Self.X "
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Cam",
+							"sid": 982618795827527,
+							"parameters": {
+								"x": "Bunny.X"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Cam",
+							"sid": 848131998384088,
+							"parameters": {
+								"y": "Self.Y"
+							}
+						},
+						{
+							"id": "set-y",
+							"objectClass": "Cam",
+							"sid": 222358868592325,
+							"parameters": {
+								"y": "Bunny.Y"
+							}
+						}
+					],
+					"sid": 191404225341308
+				}
+			],
+			"sid": 220530057554758
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bunny",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 424869941230885
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 556187471529839,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Bunny",
+							"sid": 261731684079013,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Bunny",
+							"sid": 814125611868924,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 614184128342385
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 377462552528761,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "Bunny",
+							"sid": 644735072383198,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "simulate-control",
+							"objectClass": "Bunny",
+							"sid": 657207103665008,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 353580629611897
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "Bunny",
+							"sid": 731939397853716,
+							"behaviorType": "8Direction"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Bunny",
+							"sid": 358143919731957,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 283696908903162
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 906220572694572
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Bunny",
+							"sid": 314303810722696,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 419275669830899
+				}
+			],
+			"sid": 970250892744047
+		},
+		{
+			"eventType": "comment",
+			"text": "I'd like to find a way to make them spawn in a certain place in x seconds so you'd also have a timer to collect the carrots; Therefore, the level would consist to collect in 1 minutes 10 carrots that spawn in an ''intelligent'' way around the map."
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Spawns",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 563668575657111,
+							"parameters": {
+								"interval-seconds": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Terrain",
+							"sid": 443787971382646,
+							"parameters": {
+								"object": "Carrot",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 430262568878851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bunny",
+							"sid": 402671478066097,
+							"parameters": {
+								"object": "Carrot"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 862876229055626
+				}
+			],
+			"sid": 383081616888115
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HUD",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [],
+			"sid": 174623057514396
+		}
+	],
+	"sid": 302777376218525
+}

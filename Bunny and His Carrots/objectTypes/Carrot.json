@@ -1,0 +1,57 @@
+{
+	"name": "Carrot",
+	"plugin-id": "Sprite",
+	"sid": 643316432385777,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 512,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3158772,
+						"collisionPoly": {
+							"points": [
+								0.390625,
+								0.390625,
+								0.5,
+								0.255859375,
+								0.90234375,
+								0.095703125,
+								0.736328125,
+								0.5,
+								0.6015625,
+								0.6015625,
+								0.5,
+								0.65625,
+								0.1015625,
+								0.896484375,
+								0.30859375,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 596906347592925,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
