@@ -23,6 +23,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -45,6 +53,14 @@
 			"author": "Scirra",
 			"version": "r317.2",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
 		}
 	],
 	"uniqueId": "p90scnh4pwa",
@@ -57,7 +73,9 @@
 			"Tree1",
 			"Tree2",
 			"Carrot",
-			"Cam"
+			"Cam",
+			"SpawnArea",
+			"Countdown"
 		],
 		"subfolders": []
 	},

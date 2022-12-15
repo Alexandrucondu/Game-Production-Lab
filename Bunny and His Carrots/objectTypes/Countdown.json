@@ -1,0 +1,15 @@
+{
+	"name": "Countdown",
+	"plugin-id": "Text",
+	"sid": 664397121272903,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 776064639776312
+		}
+	],
+	"effectTypes": []
+}

@@ -258,23 +258,36 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 563668575657111,
+							"sid": 278072725948217,
 							"parameters": {
 								"interval-seconds": "2"
+							}
+						},
+						{
+							"id": "pick-random-instance",
+							"objectClass": "System",
+							"sid": 306917059031338,
+							"parameters": {
+								"object": "SpawnArea"
 							}
 						}
 					],
 					"actions": [
 						{
 							"id": "spawn-another-object",
-							"objectClass": "Terrain",
-							"sid": 443787971382646,
+							"objectClass": "SpawnArea",
+							"sid": 114068100386350,
 							"parameters": {
 								"object": "Carrot",
 								"layer": "0",
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SpawnArea",
+							"sid": 174269325912065
 						}
 					],
 					"sid": 430262568878851
@@ -291,8 +304,88 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Carrot",
+							"sid": 982192416700385,
+							"parameters": {
+								"object": "SpawnArea",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Carrot",
+							"sid": 782303386403983
+						}
+					],
 					"sid": 862876229055626
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 968311591290216,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 750109449183757,
+							"parameters": {
+								"object-to-create": "Carrot",
+								"layer": "0",
+								"x": "random(0, LayoutWidth)",
+								"y": "random(0, LayoutHeight)",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 221683794876903,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "while",
+									"objectClass": "System",
+									"sid": 672448410589150
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Carrot",
+									"sid": 693550727887178,
+									"parameters": {
+										"object": "Tree1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Carrot",
+									"sid": 815357286929710,
+									"parameters": {
+										"x": "random(0, LayoutWidth)",
+										"y": "random(0, LayoutHeight)"
+									}
+								}
+							],
+							"sid": 533544726519089,
+							"disabled": true
+						}
+					]
 				}
 			],
 			"sid": 383081616888115
@@ -303,7 +396,75 @@
 			"title": "HUD",
 			"description": "",
 			"isActiveOnStart": true,
-			"children": [],
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 295127128400276
+						}
+					],
+					"actions": [
+						{
+							"id": "start-timer",
+							"objectClass": "Countdown",
+							"sid": 351258045891660,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "10",
+								"type": "once",
+								"tag": "\"t\""
+							}
+						}
+					],
+					"sid": 185608715319602
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 745273094812467
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Countdown",
+							"sid": 819979717587306,
+							"parameters": {
+								"text": "ceil(10 - Countdown.Timer.CurrentTime(\"t\"))"
+							}
+						}
+					],
+					"sid": 375912024312854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Countdown",
+							"sid": 766616254683028,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"t\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Bunny",
+							"sid": 897997448462396
+						}
+					],
+					"sid": 157192931792336
+				}
+			],
 			"sid": 174623057514396
 		}
 	],
